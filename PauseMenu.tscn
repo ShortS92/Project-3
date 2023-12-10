@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpfsiu773f8po"]
+
+[ext_resource type="Script" path="res://Exit.gd" id="1_602lv"]
+[ext_resource type="Script" path="res://Resume.gd" id="1_spdej"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 306.0
+offset_right = 649.0
+offset_bottom = 353.0
+text = "Resume"
+script = ExtResource("1_spdej")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 428.0
+offset_right = 649.0
+offset_bottom = 475.0
+text = "Exit"
+script = ExtResource("1_602lv")
+
+[connection signal="pressed" from="Resume" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Resume" to="Resume" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

@@ -1,0 +1,585 @@
+[gd_scene load_steps=4 format=3 uid="uid://doonrwq220dt5"]
+
+[ext_resource type="PackedScene" uid="uid://c3504a5sm0l3" path="res://house.tscn" id="1_6a2lm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5kmv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kbk2w"]
+
+[node name="Map" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_q5kmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
+transform = Transform3D(480.798, 0, 0, 0, 10.7856, 0, 0, 0, 517.969, 0, -0.735584, 0)
+mesh = SubResource("BoxMesh_kbk2w")
+
+[node name="Wall3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -231.421, 17.9488, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3"]
+shape = SubResource("BoxShape3D_q5kmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3/CollisionShape3D"]
+transform = Transform3D(14.2367, 0, 0, 0, 38.98, 0, 0, 0, 511.263, 0, 0, 0)
+mesh = SubResource("BoxMesh_kbk2w")
+
+[node name="Wall2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 232.504, 15.6316, -3.61151)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2"]
+shape = SubResource("BoxShape3D_q5kmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2/CollisionShape3D"]
+transform = Transform3D(13.266, 0, 0, 0, 44.1236, 0, 0, 0, 511.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_kbk2w")
+
+[node name="Wall1" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44059, 18.5434, -254.185)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall1"]
+shape = SubResource("BoxShape3D_q5kmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall1/CollisionShape3D"]
+transform = Transform3D(-6.22306e-07, 0, -475.549, 0, 37.7447, 0, 14.2367, 0, -2.07869e-05, 0, 0, 0)
+mesh = SubResource("BoxMesh_kbk2w")
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46201, 17.2826, 244.85)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
+shape = SubResource("BoxShape3D_q5kmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4/CollisionShape3D"]
+transform = Transform3D(-6.22306e-07, 0, 477.262, 0, 40.5368, 0, -14.2367, 0, -2.08618e-05, 0, 0, 0)
+mesh = SubResource("BoxMesh_kbk2w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.757303, 0.653064, 0, -0.653064, 0.757303, 0, 31.7806, 17.9229)
+
+[node name="House Group" type="Node3D" parent="."]
+
+[node name="House" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.7419, 5.40927, 222.905)
+
+[node name="House2" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -24.7145, 5.40927, 222.905)
+
+[node name="House3" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -98.9294, 5.40927, 222.905)
+
+[node name="House4" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -48.9861, 5.40927, 222.905)
+
+[node name="House5" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -2.84444, 5.40927, 222.905)
+
+[node name="House6" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -121.407, 5.40927, 222.905)
+
+[node name="House7" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -142.324, 5.40927, 222.905)
+
+[node name="House8" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 222.905)
+
+[node name="House9" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 205.058)
+
+[node name="House10" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 180.263)
+
+[node name="House11" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 153.319)
+
+[node name="House12" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 117.543)
+
+[node name="House13" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 89.5873)
+
+[node name="House14" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 50.8782)
+
+[node name="House15" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, 11.8959)
+
+[node name="House16" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 18.1929, 5.40927, -22.6264)
+
+[node name="House17" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, -22.6264)
+
+[node name="House18" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 26.9182)
+
+[node name="House19" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 76.0072)
+
+[node name="House20" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 115.501)
+
+[node name="House21" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 152.529)
+
+[node name="House22" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 188.81)
+
+[node name="House23" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -8.17784, 5.40927, 202.117)
+
+[node name="House24" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 202.117)
+
+[node name="House25" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 174.006)
+
+[node name="House26" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 114.629)
+
+[node name="House27" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 141.012)
+
+[node name="House28" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 82.8323)
+
+[node name="House29" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -37.1179, 5.40927, 27.4237)
+
+[node name="House30" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.0935, 5.40927, 27.4237)
+
+[node name="House31" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.0935, 5.40927, 84.8827)
+
+[node name="House32" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.0935, 5.40927, 128.632)
+
+[node name="House33" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.0935, 5.40927, 160.411)
+
+[node name="House34" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -67.0935, 5.40927, 186.075)
+
+[node name="House35" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -87.4981, 5.40927, 186.075)
+
+[node name="House36" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -87.4981, 5.40927, 148.072)
+
+[node name="House37" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -87.4981, 5.40927, 103.097)
+
+[node name="House38" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -87.4981, 5.40927, 44.5042)
+
+[node name="House39" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 44.5042)
+
+[node name="House40" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, -36.0042)
+
+[node name="House41" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, -5.81564)
+
+[node name="House42" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 16.1797)
+
+[node name="House43" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 67.584)
+
+[node name="House44" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 90.6083)
+
+[node name="House45" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 111.652)
+
+[node name="House46" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 130.748)
+
+[node name="House47" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 155.251)
+
+[node name="House48" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 179.384)
+
+[node name="House49" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -115.65, 5.40927, 200.884)
+
+[node name="House50" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 199.898)
+
+[node name="House51" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 172.572)
+
+[node name="House52" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 146.544)
+
+[node name="House53" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 116.372)
+
+[node name="House54" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 82.3522)
+
+[node name="House55" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 50.3747)
+
+[node name="House56" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, 20.3009)
+
+[node name="House57" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, -1.38242)
+
+[node name="House58" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, -147.412, 5.40927, -30.5588)
+
+[node name="House117" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -172.498, 5.40927, -154.595)
+
+[node name="House118" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -172.103, 5.40927, -111.569)
+
+[node name="House119" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -172.784, 5.40927, -185.781)
+
+[node name="House120" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -172.326, 5.40927, -135.84)
+
+[node name="House121" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -171.902, 5.40927, -89.7003)
+
+[node name="House122" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -172.991, 5.40927, -208.258)
+
+[node name="House123" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -173.183, 5.40927, -229.174)
+
+[node name="House124" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -171.709, 5.40927, -68.6638)
+
+[node name="House125" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -153.863, 5.40927, -68.8277)
+
+[node name="House126" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -129.068, 5.40927, -69.0553)
+
+[node name="House127" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -102.126, 5.40927, -69.3027)
+
+[node name="House128" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -66.3509, 5.40927, -69.6311)
+
+[node name="House129" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -38.3966, 5.40927, -69.8877)
+
+[node name="House130" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 0.31089, 5.40927, -70.2431)
+
+[node name="House131" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 39.2915, 5.40927, -70.601)
+
+[node name="House132" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 73.8124, 5.40927, -70.9179)
+
+[node name="House133" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 73.5703, 5.40927, -97.2875)
+
+[node name="House134" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 24.0278, 5.40927, -96.8327)
+
+[node name="House135" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -25.0591, 5.40927, -96.382)
+
+[node name="House136" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -64.5516, 5.40927, -96.0195)
+
+[node name="House137" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -101.578, 5.40927, -95.6796)
+
+[node name="House138" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -137.858, 5.40927, -95.3465)
+
+[node name="House139" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -151.163, 5.40927, -95.2243)
+
+[node name="House140" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -151.429, 5.40927, -124.163)
+
+[node name="House141" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -123.319, 5.40927, -124.421)
+
+[node name="House142" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -63.9447, 5.40927, -124.966)
+
+[node name="House143" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -90.3267, 5.40927, -124.724)
+
+[node name="House144" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -32.1497, 5.40927, -125.258)
+
+[node name="House145" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 23.2566, 5.40927, -125.767)
+
+[node name="House146" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 22.9814, 5.40927, -155.741)
+
+[node name="House147" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -34.4752, 5.40927, -155.214)
+
+[node name="House148" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -78.2231, 5.40927, -154.812)
+
+[node name="House149" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -110, 5.40927, -154.52)
+
+[node name="House150" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -135.663, 5.40927, -154.285)
+
+[node name="House151" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -135.85, 5.40927, -174.688)
+
+[node name="House152" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -97.8494, 5.40927, -175.037)
+
+[node name="House153" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -52.8756, 5.40927, -175.45)
+
+[node name="House154" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 5.71432, 5.40927, -175.988)
+
+[node name="House155" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 5.45587, 5.40927, -204.139)
+
+[node name="House156" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 85.9608, 5.40927, -204.878)
+
+[node name="House157" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 55.7736, 5.40927, -204.601)
+
+[node name="House158" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 33.7791, 5.40927, -204.399)
+
+[node name="House159" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -17.623, 5.40927, -203.927)
+
+[node name="House160" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -40.6463, 5.40927, -203.716)
+
+[node name="House161" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -61.6892, 5.40927, -203.523)
+
+[node name="House162" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -80.7846, 5.40927, -203.347)
+
+[node name="House163" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -105.286, 5.40927, -203.122)
+
+[node name="House164" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -129.418, 5.40927, -202.901)
+
+[node name="House165" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -150.918, 5.40927, -202.703)
+
+[node name="House166" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -150.223, 5.40927, -234.473)
+
+[node name="House167" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -122.899, 5.40927, -234.724)
+
+[node name="House168" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -96.8714, 5.40927, -234.963)
+
+[node name="House169" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -66.7004, 5.40927, -235.24)
+
+[node name="House170" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -32.6821, 5.40927, -235.552)
+
+[node name="House171" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, -0.70591, 5.40927, -235.846)
+
+[node name="House172" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 29.3665, 5.40927, -236.122)
+
+[node name="House173" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 51.049, 5.40927, -236.321)
+
+[node name="House174" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(-6.55671e-07, 0, 11.25, 0, 11.25, 0, -15, 0, -4.91753e-07, 80.2241, 5.40927, -236.589)
+
+[node name="House59" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 122.706, 5.40927, 224.292)
+
+[node name="House60" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 165.733, 5.40927, 224.292)
+
+[node name="House61" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 91.5183, 5.40927, 224.292)
+
+[node name="House62" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 141.462, 5.40927, 224.292)
+
+[node name="House63" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 187.603, 5.40927, 224.292)
+
+[node name="House64" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 69.0405, 5.40927, 224.292)
+
+[node name="House65" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 48.1239, 5.40927, 224.292)
+
+[node name="House66" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 224.292)
+
+[node name="House67" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 206.445)
+
+[node name="House68" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 181.649)
+
+[node name="House69" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 154.705)
+
+[node name="House70" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 118.929)
+
+[node name="House71" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 90.9737)
+
+[node name="House72" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 52.2646)
+
+[node name="House73" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, 13.2823)
+
+[node name="House74" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 208.641, 5.40927, -21.24)
+
+[node name="House75" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, -21.24)
+
+[node name="House76" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 28.3046)
+
+[node name="House77" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 77.3936)
+
+[node name="House78" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 116.888)
+
+[node name="House79" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 153.915)
+
+[node name="House80" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 190.197)
+
+[node name="House81" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 182.27, 5.40927, 203.503)
+
+[node name="House82" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 203.503)
+
+[node name="House83" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 175.392)
+
+[node name="House84" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 116.015)
+
+[node name="House85" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 142.398)
+
+[node name="House86" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 84.2187)
+
+[node name="House87" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 153.33, 5.40927, 28.8101)
+
+[node name="House88" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 123.354, 5.40927, 28.8101)
+
+[node name="House89" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 123.354, 5.40927, 86.2691)
+
+[node name="House90" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 123.354, 5.40927, 130.019)
+
+[node name="House91" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 123.354, 5.40927, 161.797)
+
+[node name="House92" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 123.354, 5.40927, 187.461)
+
+[node name="House93" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 102.95, 5.40927, 187.461)
+
+[node name="House94" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 102.95, 5.40927, 149.459)
+
+[node name="House95" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 102.95, 5.40927, 104.483)
+
+[node name="House96" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 102.95, 5.40927, 45.8906)
+
+[node name="House97" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 45.8906)
+
+[node name="House98" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, -34.6177)
+
+[node name="House99" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, -4.42923)
+
+[node name="House100" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 17.5662)
+
+[node name="House101" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 68.9705)
+
+[node name="House102" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 91.9947)
+
+[node name="House103" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 113.038)
+
+[node name="House104" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 132.135)
+
+[node name="House105" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 156.637)
+
+[node name="House106" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 180.77)
+
+[node name="House107" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 74.7975, 5.40927, 202.271)
+
+[node name="House108" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 201.284)
+
+[node name="House109" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 173.959)
+
+[node name="House110" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 147.931)
+
+[node name="House111" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 117.758)
+
+[node name="House112" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 83.7386)
+
+[node name="House113" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 51.7611)
+
+[node name="House114" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 21.6873)
+
+[node name="House115" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, 0.0039978)
+
+[node name="House116" parent="House Group" instance=ExtResource("1_6a2lm")]
+transform = Transform3D(15, 0, 0, 0, 11.25, 0, 0, 0, 11.25, 43.0353, 5.40927, -29.1724)

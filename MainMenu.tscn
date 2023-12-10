@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj3g00ts5oyrs"]
+
+[ext_resource type="Script" path="res://Play.gd" id="1_shte0"]
+[ext_resource type="Script" path="res://Quit.gd" id="2_vejha"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Play" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 404.0
+offset_right = 694.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 36
+text = "Play"
+script = ExtResource("1_shte0")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 451.0
+offset_top = 489.0
+offset_right = 695.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+script = ExtResource("2_vejha")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 388.0
+offset_top = 191.0
+offset_right = 737.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 42
+text = "Drone Controller"
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

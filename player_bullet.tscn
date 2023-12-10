@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://tmak2yg2r0pp"]
+
+[ext_resource type="Material" uid="uid://c2pl05hu55w8x" path="res://PlayerMat.tres" id="1_f78e0"]
+[ext_resource type="Script" path="res://player_bullet.gd" id="1_kkqfc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u0vdn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hoynu"]
+
+[node name="PlayerBullet" type="RigidBody3D"]
+script = ExtResource("1_kkqfc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("SphereShape3D_u0vdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("SphereMesh_hoynu")
+surface_material_override/0 = ExtResource("1_f78e0")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3504a5sm0l3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5llk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w4eg5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2emwf"]
+albedo_color = Color(0.709804, 0.52549, 0.301961, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rggg0"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_dtb4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydu3x"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="House" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0019694, 0.734519, -0.0167766)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_l5llk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_w4eg5")
+surface_material_override/0 = SubResource("StandardMaterial3D_2emwf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0116793, 1.01591, -0.00221167)
+shape = SubResource("ConvexPolygonShape3D_rggg0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.602541, 0, -1, 0, -4.37114e-08, -0.0127991, -0.21194, 0)
+mesh = SubResource("PrismMesh_dtb4a")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ydu3x")

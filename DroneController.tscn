@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb3m6e8vqjydc"]
+
+[ext_resource type="PackedScene" uid="uid://doonrwq220dt5" path="res://map.tscn" id="1_yjmnk"]
+[ext_resource type="PackedScene" uid="uid://c3e8e4fi8lbtn" path="res://player.tscn" id="2_kqoex"]
+[ext_resource type="PackedScene" uid="uid://ddb6el32ngu73" path="res://Enemy.tscn" id="3_uudwb"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_vv613"]
+geometry_parsed_geometry_type = 2
+
+[node name="DroneController" type="Node3D"]
+
+[node name="Map" parent="." instance=ExtResource("1_yjmnk")]
+
+[node name="Player" parent="." instance=ExtResource("2_kqoex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.2367, 5.37741, -20.041)
+
+[node name="Enemy" parent="." instance=ExtResource("3_uudwb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -181.169, 5.31815, -144.588)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.37746, 0)
+navigation_mesh = SubResource("NavigationMesh_vv613")
